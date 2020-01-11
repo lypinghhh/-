@@ -1,0 +1,556 @@
+> 作者：会飞的鱼
+> https://www.nowcoder.com/discuss/152989?type=post&order=time&pos=&page=1&subType=2
+>
+> 来源：牛客网
+
+##### 1. 若目标串的长度为n,模式串的长度为n/3,则执行模式匹配算法时，在最坏的情况下的时间复杂度是（）
+
+   A. O(n^3)  **B.O(n^2)**  C.O(n)  D.O(n/3)  
+
+  [分析] 在主串中可能存在多个模式串“部分匹配”的子串，因而引起数次回溯，若除了最后一次匹配，其他比较每次都需要回溯，则循环次数的数量级为n2。
+
+#####    2. 将字母序列（E,H,B,Y,L,A,M,S,Y,D,F,X）按ASCⅡ码值,分别使用冒泡排序、二路归并排序和快速排序一趟的结果可以为（）  
+
+   *A.*  E,B,H,L,A,M,S,Y,D,F,X,Y  
+
+   E,H,B,Y,A,L,M,S,D,Y,F,X  
+
+   D,A,B,E,L,Y,M,S,Y,H,F,X  
+
+
+
+   *B.*  E,H,B,L,A,M,S,Y,D,F,X,Y  
+
+   A,B,E,H,L,Y,D,F,M,S,X,Y  
+
+   B,A,D,E,H,Y,L,M,S,Y,F,X  
+
+
+
+   *C.* E,H,B,L,A,M,S,Y,D,F,X,Y  
+
+​     D,A,B,E,L,Y,M,S,Y,H,F,X  
+
+   B,A,D,E,H,Y,L,M,S,Y,F,X  
+
+
+
+   ***D.* E,B,H,L,A,M,S,Y,D,F,X,Y**  
+
+​     **A,B,E,H,L,Y,D,F,M,S,X,Y**  
+
+​     **D,A,B,E,L,Y,M,S,Y,H,F,X**  
+
+   
+
+##### 3.如下HTML代码：下面选项中能将表单提交的有？  
+
+   A.  window.forms.submit();  
+
+   **B.  document.forms[0].submit();**  
+
+   C.  document.form.submit();  
+
+   **D.  document.forms[‘myform’].submit();**  
+
+   
+  
+
+##### 4.动态创建一个DIV标签并追加到BODY节点中，可以使用那些方法？  
+
+   **A.  createElement和appendChild;**  
+
+   B.  getElementById和replaceChild;  
+
+   C.  createTextNode和setAttribute;  
+
+   D.  createTextNode和insertBefore  
+
+   
+  
+
+5. ##### 如下javascript代码：  
+
+​     console.log(Number(undefined));  
+
+   执行结果为？  
+
+   **A.  NAN;**  
+
+   B.  null;  
+
+   C.  undefined;  
+
+   D.  0;  
+
+   [分析]数值转换
+
+Null => 0
+
+Undefined => NAN  
+
+   \6.  运行下面的代码，当点击生成的div元素后，其结果是？  
+
+   var text=’A’;  
+
+   function Div(){  
+
+​     this.text='B';  
+
+​     this.ele=documenet.createElement('div');  
+
+​     this.ele.innerHTML=this.text;  
+
+​     this.ele.addEventListener('click',this.func);  
+
+   }  
+
+   div.prototype.Render=function(){  
+
+​     document.body.appendChild(this.ele);  
+
+   }  
+
+   div.prototype.func=function(){  
+
+​     console.log(this.text,text);  
+
+   };  
+
+   var div=new Div();  
+
+   div.Render();  
+
+   div.func();  
+
+   A.  undefined B;  
+
+   B.  A B;  
+
+   C.  B A;  
+
+   D.  undefined A;  
+
+   (选A?)
+  
+
+##### 7.关于NodeJS以下说法正确的是？  
+
+   A.  下载完的依赖包都被放入node_modules的目录中；  
+
+   B.  depandencies是指在生产环境中需要用到的依赖；  
+
+   C.devDependencies是指在开发测试环境中用到的依赖；  
+
+   D.NodeJS是单线程设计的应用，无法开启多线程处理任务；  
+
+   
+  
+
+#####    8.有6个字母a,b,c,d,e,f顺序入栈，下方的弹出栈的序列错误的是（）  
+
+   A.e,d,c,f,b,a  
+
+   **B.d,e,c,a,b,f**  
+
+   C.c,d,f,e,b,a  
+
+   D.b,c,d,a,e,f  
+
+   
+  
+
+   9.以下说法，正确的是？  
+
+   A.对象的constructor属性始终与其原型的constructor属性相等；  
+
+   B.每个自定义函数都有一个prototype属性；  
+
+   C.只有使用new操作符创建的对象才会有constructor属性；  
+
+   D.对象的constructor属性始终指向构造函数本身；  
+
+   
+  
+
+   10.关于正则表达式字符类以下说法正确的是?  
+
+   A./^[aA-Z]\w{7,10}$/长度为8-10的用户密码(以字母开头数字下划线);  
+
+   B./^[u4e00-u9fa5]{0,}$/汉字验证;  
+
+   C./^w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/电子邮箱验证;  
+
+   D./^http: //([w-]+\.)+[\w-]+(/w-./?%&=]*)?$/URL地址验证;  
+
+   
+  
+
+#####    11.在 HTML5中,哪个方法用于获得用户的当前位置?  
+
+   A. getUserPosition();  
+
+   B.getPosition();  
+
+   **C.getCurrentPosition();**  
+
+   D.getClientPosition();  
+
+  [分析]
+
+ 使用 getCurrentPosition() 方法来获得用户的位置。 
+
+watchPosition() - 返回用户的当前位置，并继续返回用户移动时的更新位置（就像汽车上的 GPS）。
+
+clearWatch() - 停止 watchPosition() 方法
+
+   12.TCP/P五层协议从上到下分别是什么?  
+
+   A.会话层->传输层>网络层>数据链路层->物理层  
+
+   B.应用层->传输层->网络层->数据链路层->物理层;  
+
+   C.表示层->网络层->传输层->数据链路层->物理层  
+
+   D.会话层->网络层->传输层>数据链路层->物理层  
+
+   
+  
+
+   13若无向图G=(V,E)中含10个顶点,要保证图G在任何情况下都是连通的,则需要的边数最少是  
+
+   A.72  
+
+   B.90  
+
+   C.9  
+
+   D.37  
+
+   
+  
+
+   14.下列排序算法中,哪些时间复杂不会超过O(N*log2N)( )  
+
+   A.归并排序  
+
+   B.堆排序  
+
+   C.快速排序  
+
+   D.冒泡排序  
+
+   
+  
+
+   \15. Generator函数是ES6提供的种异步编程解决方案那么以下输出结果是?  
+
+   function* testGenerator(x){  
+
+   yield x+1;  
+
+   return"hello cvte";  
+
+   yield x+2;  
+
+   }  
+
+   var testGen= testGenerator(1);  
+
+   testGen.next();  
+
+   testGen.next();  
+
+   console.log(testGen.next());  
+
+   
+  
+
+   A.{value: "hello cvte",done:false}; I  
+
+   B.{value: undefined,done:true}  
+
+   C.{value: hello cvte",done:true}  
+
+   D.{value: 2,done:false}  
+
+   
+  
+
+   16.下面哪些加密算法是可逆的？  
+
+   A.MD5;  不可逆
+
+   B.AES;  
+
+   C.RSA;  
+
+   D.DES;  
+
+   [分析]
+
+  
+
+   17.下面关于隐藏元素的说法不正确的是?  
+
+   A.opacity:0,元素隐藏起来了,但不会改变页面布局;  
+
+   B.父元素设置 opacity:0,子元素也变透明了;  
+
+   C.visibility: hidden,元素隐藏起来了,但不会改变页面布局;  
+
+   D. display:none,元素隐藏起来了,但不会改变页面布局;  
+
+   
+  
+
+   18以下哪些属于 macrotask?  
+
+   A. XMLHttpRequest;  
+
+   B. setImmediate;  
+
+   C. setInterval;  
+
+   D. setTimeout;  
+
+   
+  
+
+   19下列选项中，值为true的是?  
+
+   function Mike(){  
+
+   this sayMike=function(){};  
+
+   }  
+
+   function Tom(){}:  
+
+   Tom.prototype= new Mike()  
+
+   Tom.prototype.sayTom-function(){}  
+
+   var tom=new Tom();  
+
+   A.tom._proto_._proto_===Mike;  
+
+   B.tom._proto_.sayTom===Tom.prototype.sayTom;  
+
+   C.tom._proto_._proto_===Mike.prototype;  
+
+   D.tom._proto_._proto_._proto_===Mike.prototype;  
+
+   
+  
+
+#####    20.下面代码的输出结果是?  
+
+   var array1=[5,12,8,130,44];  
+
+   var found= array1.find(element =>element > 10);  
+
+   console.log(found);  
+
+   **A.12;**  
+
+   B.1;  
+
+   C.4;  
+
+   D.44;  
+
+  [分析]
+
+  `**find()**` 方法返回数组中满足提供的测试函数的第一个元素的值。否则返回 [`undefined`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)。
+
+#####    21分析下面的 JavaScript语句:  
+
+   var str="This apple costs "+50.5+0.5;  
+
+   执行后str的值是?  
+
+   A."This apple costs"50.5. 0.5;  
+
+   **B. This apple costs 50.50.5:**  
+
+   C. This apple costs 51;  
+
+   D. This apple costs 50.55;  
+
+   
+  
+
+   22如下代码  
+
+   for(var i=0;i<5;i++){  
+
+   setTimeout(function(){console.log(i);i*1000};  
+
+   }  
+
+   输出的结果为?  
+
+   A.4 4 4 4 4  
+
+   B.5 5 5 5 5  
+
+   C.0 1 2 3 4  
+
+   D.1 2 3 4 5  
+
+   
+  
+
+   23.下面属于盒子定位有?  
+
+   A.盒子浮动定位  
+
+   B.盒子页面定位  
+
+   C.position定位  
+
+   D.盒子流动定位  
+
+   
+  
+
+   
+  
+
+   24.下面关于 apply和call的描述中,错误的是?  
+
+   A.apply也可以传入 number或 string类型为参数;  
+
+   B.call传参以不定数的方式传入;  
+
+   C.参数数量动态变化时一般用 apply;  
+
+   D.两者都可以改变函数运行时的上下文;  
+
+   
+  
+
+   
+  
+
+   25.关于 async和 await的描述正确的是?  
+
+   A.使用该特性需要在 function之前加上 async关键字；  
+
+   B.await后面只能是 promise对象;  
+
+   C.await后面可以是个字符串常量;  
+
+   D.async函数中所有代码的执行方式从异步执行变为同步执行;  
+
+   
+  
+
+   26.下面哪些不是 JavaScript内置的函数对象?  
+
+   A.Array;  
+
+   B.Time;  
+
+   C.RegExp;  
+
+   D.DateTime;  
+
+   
+  
+
+   27.用于播放HTML5视频文件的正确HTML5元素是?  
+
+   A.audio  
+
+   B.video  
+
+   C.media  
+
+   D.movie  
+
+   
+  
+
+#####    28.下面代码的输出结果是?  
+
+   var result=[‘1’,’2’,’3’].map(parseInt);  
+
+   console.log(result);  
+
+   **A.其他3个都不对；**  
+
+   B.[‘1’,’2’,’3’];  
+
+   C.[1,2,3];  
+
+   D.[0,1,2];  
+
+​      [分析] 
+
+```
+['1', '2', '3'].map(parseInt)
+//// 1, NaN, NaN
+```
+
+> **parseInt(string, radix)**
+>
+> string为字符串，radix为介于2-36之间的数,默认10
+
+ parseInt可以有两个参数.第二个参数是进制数.
+
+map方法在调用callback函数时,会给它传递三个参数:当前正在遍历的元素,   元素索引, 原数组本身.
+
+parseInt('1', 0) //radix为0时，且string参数不以“0x”和“0”开头时，按照10为基数处理。这个时候返回1
+
+parseInt('2', 1) //基数为1（1进制）表示的数中，最大值小于2，所以无法解析，返回NaN
+
+parseInt('3', 2) //基数为2（2进制）表示的数中，最大值小于3，所以无法解析，返回NaN
+
+
+
+
+   编程题  
+
+#####    29.使用CSS实现一个等边三角形  
+
+```
+<div id="triangle"></div>
+//等边三角形的高对应根号3
+    #triangle{
+            margin:0 auto;
+            width:0px;
+            height:0px;
+            border-top:173.2px solid transparent;
+            border-bottom:173.2px solid green;
+            border-left:100px solid transparent;
+            border-right:100px solid transparent;
+        }
+```
+
+
+
+
+
+
+
+
+
+  
+
+   30.写个密码校验函数,输入一个密码,判断这个密码是否符合下述要求  
+
+   1.由数字字母组成；  
+
+   2.6-16位；  
+
+   3.字母和数字均至少出现次；  
+
+   
+  
+
+   function checkPwd(pwd){  
+
+   } 
+
