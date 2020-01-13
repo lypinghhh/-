@@ -2,6 +2,8 @@
 
 > START:2020-1-11
 
+`2020-1-11`
+
 #### 1.圣杯布局和双飞翼布局的理解和区别，并用代码实现
 
 > [參考文章](https://www.jianshu.com/p/81ef7e7094e8)
@@ -118,3 +120,34 @@ body {
 
 ```
 
+`2020-1-12`
+
+#### 2. CSS3有哪些新增的特性？
+
+##### 边框圆角
+
+border-radius
+
+##### 盒子阴影
+
+box-shadow
+
+##### 文字阴影
+
+text-shadow
+
+##### 2d、3d变换
+
+transform
+rotate()
+scale()
+skew()
+translate()
+
+##### 过度动画
+
+transition
+
+##### 自定义动画
+
+animation

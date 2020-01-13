@@ -2,6 +2,8 @@
 
 > START:2020-1-11
 
+`2020-1-11`
+
 #### 1.页面导入样式时，使用link和@import有什么区别？
 
 摘自：[CSS引入方式及link和@import的区别是?]( https://xiangshuo.blog.csdn.net/article/details/52885924 )
@@ -22,3 +24,22 @@
 - 区别4：链接支持使用Javascript控制DOM去改变样式；
 
   而[@import](https://github.com/import)不支持。
+
+`2020-1-12`
+
+#### 2. html的元素有哪些（包含H5）？
+
+##### 行内元素
+
+![](https://user-gold-cdn.xitu.io/2020/1/12/16f99cc201d57065?w=806&h=537&f=png&s=20693)
+
+##### 块级元素
+
+![](https://user-gold-cdn.xitu.io/2020/1/12/16f99ccdc05563d2?w=779&h=670&f=png&s=37444)
+
+##### H5新增标签
+
+![](https://user-gold-cdn.xitu.io/2020/1/12/16f99cdfbf91ba9a?w=858&h=888&f=png&s=135601)
+
+
+
