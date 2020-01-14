@@ -151,3 +151,15 @@ transition
 ##### 自定义动画
 
 animation
+
+#### 3.第3天在页面上隐藏元素的方法有什么？
+
+- display: none
+- opacity: 0
+- visibility: hidden
+- z-index: -9999999999999
+- transform: scale(0)
+- margin-left: -100%
+- position: relative; left: -100%
+- width: 0; height: 0;
+- font-size: 0; 

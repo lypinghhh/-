@@ -66,3 +66,17 @@ var str = ' 1 2 3445 6    ';
 console.log(str.split(' ').join('')) // 输出"1234456"
 ```
 
+#### 3.移除字符串中最后一个指定的字符 
+
+```
+function delLast (str,del) {
+if (tpeof str !== 'string') {
+alert('请确认要删除的对象为字符串！');
+retrun false;
+} else {
+let index = str.lastIndexOf(del);
+str.substring(0,index ) + str.substring(index+1,str.length);
+}
+}
+```
+
