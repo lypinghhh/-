@@ -80,3 +80,23 @@ str.substring(0,index ) + str.substring(index+1,str.length);
 }
 ```
 
+
+
+#### 4.写一个方法把下划线命名转成大驼峰命名
+
+```
+// 下划线转换驼峰
+function toHump(name) {
+    return name.replace(/\_(\w)/g, function(all, letter){
+      
+        return letter.toUpperCase();
+        
+    });
+}
+// 驼峰转换下划线
+function toLine(name) {
+  return name.replaceA-Zg,"_$1").toLowerCase();
+}
+
+```
+

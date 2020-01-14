@@ -63,3 +63,37 @@
 - translate:元素和子孙节点内容是否需要本地化（均不支持）
 
  [https://developer.mozilla.org/zh-CN/docs/Web/HTML/Global_attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes) 
+
+#### 4.HTML5的文件离线储存怎么使用，工作原理是什么？
+
+https://juejin.im/entry/5e1dda8451882520a167dd2d/detail
+
+```
+<!DOCTYPE HTML>
+<html manifest = "cache.manifest">
+...
+</html>
+
+
+
+
+```
+
+```
+//cache.manifest文件：
+
+CACHE MANIFEST
+#v0.11
+
+CACHE:
+js/app.js
+css/style.css
+
+NETWORK:
+resourse/logo.png
+
+FALLBACK:
+/ /offline.html
+
+```
+
