@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12911af2-f6a1-4e75-a9b6-aed3d2437ac1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/101/101.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DAY/demo/hump_line.js" beforeDir="false" afterPath="$PROJECT_DIR$/DAY/demo/hump_line.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,13 +17,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/101/101.js">
+        <entry file="file://$PROJECT_DIR$/DAY/demo/hump_line.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="760">
-              <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+            <state relative-caret-position="190">
+              <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -43,8 +41,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/101/101.js" />
+        <option value="$PROJECT_DIR$/DAY/demo/hump_line.js" />
       </list>
     </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
@@ -56,7 +61,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="252" />
     <option name="width" value="843" />
     <option name="height" value="636" />
@@ -66,11 +71,70 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="-" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="-" type="462c0819:PsiDirectoryNode" />
+              <item name="book" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="-" type="462c0819:PsiDirectoryNode" />
+              <item name="DAY" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="-" type="462c0819:PsiDirectoryNode" />
+              <item name="DAY" type="462c0819:PsiDirectoryNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="-" type="462c0819:PsiDirectoryNode" />
+              <item name="DAY" type="462c0819:PsiDirectoryNode" />
+              <item name="week" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="-" type="462c0819:PsiDirectoryNode" />
+              <item name="webKnowledge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="-" type="462c0819:PsiDirectoryNode" />
+              <item name="webKnowledge" type="462c0819:PsiDirectoryNode" />
+              <item name="JS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="-" type="462c0819:PsiDirectoryNode" />
+              <item name="webKnowledge" type="462c0819:PsiDirectoryNode" />
+              <item name="JS" type="462c0819:PsiDirectoryNode" />
+              <item name="ZF-2018" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="-" type="b2602c69:ProjectViewProjectNode" />
+              <item name="-" type="462c0819:PsiDirectoryNode" />
+              <item name="webKnowledge" type="462c0819:PsiDirectoryNode" />
+              <item name="JS" type="462c0819:PsiDirectoryNode" />
+              <item name="ZF-2018" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -80,6 +144,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -116,16 +181,17 @@
       <workItem from="1562653487161" duration="5342000" />
       <workItem from="1562998259563" duration="599000" />
       <workItem from="1576630963149" duration="163000" />
+      <workItem from="1580450207033" duration="1325000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6104000" />
+    <option name="totallyTimeSpent" value="7429000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="704" extended-state="6" />
+    <frame x="-7" y="-7" width="1295" height="704" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15965052" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15965052" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -150,11 +216,23 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/101/101.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
+        <state relative-caret-position="484">
           <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/webKnowledge/JS/ZF-2018/js/3-带var和不带的区别.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-713" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DAY/demo/hump_line.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
         </state>
       </provider>
     </entry>
