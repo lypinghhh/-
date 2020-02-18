@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12911af2-f6a1-4e75-a9b6-aed3d2437ac1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DAY/demo/hump_line.js" beforeDir="false" afterPath="$PROJECT_DIR$/DAY/demo/hump_line.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webKnowledge/JS/ZF-2018/js/1-data.js" beforeDir="false" afterPath="$PROJECT_DIR$/webKnowledge/JS/ZF-2018/js/1-data.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔经/CVTE2020长期实习生笔试.md" beforeDir="false" afterPath="$PROJECT_DIR$/笔经/CVTE2020长期实习生笔试.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,7 +20,7 @@
         <entry file="file://$PROJECT_DIR$/DAY/demo/hump_line.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
-              <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+              <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -61,7 +61,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="252" />
     <option name="width" value="843" />
     <option name="height" value="636" />
@@ -182,16 +182,18 @@
       <workItem from="1562998259563" duration="599000" />
       <workItem from="1576630963149" duration="163000" />
       <workItem from="1580450207033" duration="1325000" />
+      <workItem from="1581043815518" duration="285000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7429000" />
+    <option name="totallyTimeSpent" value="7714000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="704" extended-state="7" />
+    <frame x="-7" y="-7" width="1295" height="704" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15965052" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.06592534" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -214,16 +216,7 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/101/101.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/101/101.js" />
     <entry file="file://$PROJECT_DIR$/webKnowledge/JS/ZF-2018/js/3-带var和不带的区别.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-713" />
@@ -232,7 +225,7 @@
     <entry file="file://$PROJECT_DIR$/DAY/demo/hump_line.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
         </state>
       </provider>
     </entry>

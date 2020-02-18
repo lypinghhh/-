@@ -1,0 +1,167 @@
+<html>
+  <head>
+    <title>监听器 watch</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <h3>Watch 用法1：常见用法</h3>
+      <input v-model="message">
+      <span>{{copyMessage}}</span>
+    </div>
+    <div id="root2">
+      <h3>Watch 用法2：绑定方法</h3>
+      <!-- 监听绑定methods里面的方法 -->
+      <input v-model="message">
+      <span>{{copyMessage}}</span>
+    </div>
+    <div id="root3">
+      <h3>Watch 用法3：deep + handler</h3>
+      <input v-model="deepMessage.a.b">
+      <span>{{copyMessage}}</span>
+    </div>
+    <div id="root4">
+      <h3>Watch 用法4：immediate</h3>
+      <input v-model="message">
+      <span>{{copyMessage}}</span>
+    </div>
+    <div id="root5">
+      <h3>Watch 用法5：绑定多个 handler</h3>
+      <input v-model="message">
+      <span>{{copyMessage}}</span>
+    </div>
+    <div id="root6">
+      <h3>Watch 用法6：监听对象属性</h3>
+      <input v-model="deepMessage.a.b">
+      <span>{{copyMessage}}</span>
+    </div>
+      
+    <script>
+      new Vue({
+        el: '#root',
+        watch: {
+          message(value) {
+            this.copyMessage = value
+          }
+        },
+        data() {
+          return {
+            message: 'Hello Vue',
+            copyMessage: ''
+          }
+        }
+      })
+      new Vue({
+        el: '#root2',
+        watch: {
+            // 将监听方法下移
+          message: 'handleMessage'
+        },
+        data() {
+          return {
+            message: 'Hello Vue',
+            copyMessage: ''
+          }
+        },
+        methods: {
+          handleMessage(value) {
+            this.copyMessage = value
+          }
+        }
+      })
+      new Vue({
+        el: '#root3',
+        watch: {
+          deepMessage: {
+            handler: 'handleDeepMessage',
+            //跨越一级往下监听的开关
+            deep: true
+          }
+        },
+        data() {
+          return {
+            deepMessage: {
+              a: {
+                b: 'Deep Message'
+              }
+            },
+            copyMessage: ''
+          }
+        },
+        methods: {
+          handleDeepMessage(value) {
+            this.copyMessage = value.a.b
+          }
+        }
+      })
+      new Vue({
+        el: '#root4',
+        watch: {
+          message: {
+            handler: 'handleMessage',
+            //启用 则copymessage会立马被赋初值
+            //在页面渲染之前，先执行监听器 created 就进行赋值
+            immediate: true,
+          }
+        },
+        data() {
+          return {
+            message: 'Hello Vue',
+            copyMessage: ''
+          }
+        },
+        methods: {
+          handleMessage(value) {
+            this.copyMessage = value
+          }
+        }
+      }),
+      new Vue({
+        el: '#root5',
+        watch: {
+            // 数组，若提供string会直接到methods中找
+          message: [{
+            handler: 'handleMessage',
+          },
+
+          'handleMessage2',
+          function(value) {
+            this.copyMessage = this.copyMessage + '...'
+          }]
+        },
+        data() {
+          return {
+            message: 'Hello Vue',
+            copyMessage: ''
+          }
+        },
+        methods: {
+          handleMessage(value) {
+            this.copyMessage = value
+          },
+          handleMessage2(value) {
+            this.copyMessage = this.copyMessage + '*'
+          }
+        }
+      })
+      new Vue({
+        el: '#root6',
+        watch: {
+            //直接监听对象下的某个属性，添加响应式状态，比较轻
+          'deepMessage.a.b': 'handleMessage'
+        },
+        data() {
+          return {
+            deepMessage: { a: { b: 'Hello Vue' } },
+            copyMessage: ''
+          }
+        },
+        methods: {
+          handleMessage(value) {
+            this.copyMessage = value
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
