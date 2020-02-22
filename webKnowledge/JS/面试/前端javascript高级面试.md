@@ -338,8 +338,11 @@ console.log(item)
 - JS执行的时候，浏览器DOM渲染会暂停
 - 两段js也不能同时执行（都修改DOM就冲突了）
 - webworker支持多线程，但是不能访问DOM
+- js和DOM渲染共用同一个进程
 
-解决方案：异步
+<img src="https://user-gold-cdn.xitu.io/2020/2/19/1705dcfb71764408?w=849&amp;h=474&amp;f=png&amp;s=220438" style="zoom:50%;" />
+
+解决方案：异步（不会阻塞后面代码的执行）
 
 实现方式：eventloop
 
@@ -398,6 +401,10 @@ BootCDN jquery 引入
 - 基本语法
 
   <img src="https://user-gold-cdn.xitu.io/2020/2/16/1704d47b550ef946?w=692&amp;h=675&amp;f=png&amp;s=279680" style="zoom:50%;" />
+
+  <img src="https://user-gold-cdn.xitu.io/2020/2/19/1705ddee15c073f8?w=537&amp;h=232&amp;f=png&amp;s=95632" style="zoom:33%;" />
+
+  <img src="https://user-gold-cdn.xitu.io/2020/2/19/1705de187f174ed9?w=907&amp;h=381&amp;f=png&amp;s=250330" style="zoom:50%;" />
 
   可以直接在浏览器中进行调试：
 
