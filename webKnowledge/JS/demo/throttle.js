@@ -20,7 +20,7 @@ const div1 = document.getElementById('div1')
 
 
 
-function throttle(fn,delay = 100){
+function throttle(fn,delay = 1000){
     let timer = null;
     return function (){
         if(timer){
@@ -37,3 +37,33 @@ function throttle(fn,delay = 100){
 div1.addEventListener('drag',throttle(function(e){
     console.log(e.offsetX,e.offsetY)
 }))
+
+
+
+//时间
+function throttle2(fn, wait) {
+	let prev = new Date();
+	return function() { 
+	    const args = arguments;
+		const now = new Date();
+		if (now - prev > wait) {
+			fn.apply(this, args);
+			prev = new Date();
+		}
+    }
+}
+
+
+//标志位
+// 节流函数
+const throttle3 = (fn, delay = 500) => {
+    let flag = true;
+    return (...args) => {
+      if (!flag) return;
+      flag = false;
+      setTimeout(() => {
+        fn.apply(this, args);
+        flag = true;
+      }, delay);
+    };
+  };

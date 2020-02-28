@@ -30,7 +30,4 @@ Function.prototype.bind1 = function(){
         //apply第一个参数是this,第二个参数是数组
         return self.apply(t,args)
     }
-
-
-
 }

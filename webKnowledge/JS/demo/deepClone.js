@@ -6,10 +6,10 @@ function deepClone(obj = {}){
     //初始化返回结果
     let result ;
     if(obj instanceof Array){
-        return [];
+        result = [];
 
     }else{
-        return {}
+        result = {}
     }
 
     for(let key in obj){
