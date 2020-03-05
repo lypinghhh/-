@@ -128,7 +128,7 @@ const queryString = {
         /* 功能实现 */
       let arr=[];
       //注意使用of报错  TypeError: obj is not iterable
-      for( let key of obj){
+      for( let key in obj){
       	if(typeof obj[key] === 'object'){
           while(obj[key].length >0){
           	arr.push(`${key}=${obj[key].shift()}`);
