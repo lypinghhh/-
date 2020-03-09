@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html,
+        body {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+        }
+
+        /* TEST01 主内容区在前 */
+
+        /* flex布局 */
+        /* .container{
+            display:flex;
+            height: 100%;
+        }
+        .main{
+            flex:1;
+            background-color: blue;
+        }
+        .left{
+            flex-basis: 200px;
+            order: -1;
+            background-color: red;
+        }
+        .right{
+            flex-basis: 100px;
+      
+            background-color: red;
+        } */
+
+
+
+        /* TEST02 主内容区在中间 */
+        /* table */
+        /* .container{
+            display: table;
+            width:100%;
+        }
+        .container>div{
+            display: table-cell;
+        }
+        .left{
+            width: 100px;
+            background: red;
+        }
+        .main{
+            background: blue;
+        }
+        .right{
+            width: 200px;
+            background: red;
+        } */
+
+
+
+
+        /* position+margin */
+
+        /* div {
+            height: 100%;
+        }
+        .container{
+            position: relative;
+        }
+        .main {
+            margin: 0 200px 0 100px;
+            background-color: blue;
+        }
+
+        .left {
+            width: 100px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: red;
+        }
+
+        .right {
+            width: 200px;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            background-color: red;
+        } */
+  
+        /* grid网格布局 */
+        /* .container{
+            display: grid;
+            width: 100%;
+            grid-template-rows: 100px;  
+           
+            grid-template-columns: 100px auto 200px;  
+           
+        }
+        .left{
+            background: red;
+        }
+        .main{
+            background: blue;
+        }
+        .right{
+            background:red;
+        } */
+
+        /* 主内容区在最后 */
+        /* 流体布局 */
+        /* .left {
+	    float: left;
+	    height: 200px;
+	    width: 100px;
+	    background-color: red;
+	}
+	.right {
+	    width: 200px;
+	    height: 200px;
+	    background-color: blue;
+	    float: right;
+	}
+	.main {
+	    margin-left: 120px;
+	    margin-right: 220px;
+	    height: 200px;
+	    background-color: green;
+	} */
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+    <!-- TEST01 主内容区在前 -->
+    <!-- <div class="container">
+        <div class="main">Main</div>
+        <div class="left">Left</div>
+        <div class="right">Right</div>
+
+    </div> -->
+
+
+    <!-- TEST02 主内容区在中间 -->
+    <div class="container">
+        <div class="left">Left</div>
+        <div class="main">Main</div>
+        <div class="right">Right</div>
+    </div>
+
+
+
+
+    <!-- TEST02 主内容区在后 -->
+    <!-- <div class="container">
+        <div class="left">Left</div>
+        <div class="right">Right</div>
+        <div class="main">Main</div>
+    </div> -->
+
+
+
+
+</body>
+
+</html>
