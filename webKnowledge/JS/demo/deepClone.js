@@ -22,3 +22,13 @@ function deepClone(obj = {}){
     //返回结果
     return result;
 }
+
+
+
+var obj1 = {
+    a:1,
+    b:2
+}
+var obj2 = deepClone(obj1);
+obj2.a = 2;
+console.log(obj1,obj2)

@@ -62,7 +62,7 @@ function foo() {
             myName = newName
         },
         getName: function () {
-            console.log(test1) 
+            console.log(test1)
             return myName
         }
 
@@ -70,7 +70,36 @@ function foo() {
     }
     return innerBar
 }
-var bar = foo() 
-bar.setName(" 极客邦 ") 
-bar.getName() 
+var bar = foo()
+bar.setName(" 极客邦 ")
+bar.getName()
 console.log(bar.getName())
+
+
+
+
+
+//  TEST
+var name = "the window";
+var object = {
+    name: "the object",
+
+    getNameFunc: function () {
+        var name = "the func";
+        console.log(this.name);
+
+        return function () {
+            console.log(name);
+            console.log(this.name);
+        };
+
+    }
+
+};
+object.getNameFunc()();
+
+
+
+
+
+
