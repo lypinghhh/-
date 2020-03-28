@@ -106,7 +106,7 @@ function distinctObjectArr(arr){
         //对象的字符串是键，对象是值
         unique[JSON.stringify(item)] = item
     })
-    arr.= Object.keys(unique).map
+    arr= Object.keys(unique).map
 }
 
 var arr = [{
@@ -174,4 +174,128 @@ function unique(arr){
 
 
 
+var arr5 = [NaN,NaN,{A:1},{A:1}]
 
+
+
+
+//对于对象类型的使用JSON.stringify序列化为字符串，但是我没有处理不能序列化的情况，然后是用typeof+item来代替item避免出现1和'1'同时作为key的情况
+var arr = [1,1,'1','1',0,0,'0','0',undefined,undefined,null,null,NaN,NaN,{},{},{"a":1},{"a":1},[1,2],[1,2],/a/,/a/,function(){console.log(1)},function(){console.log(1)}]
+
+
+function func(arr){
+    var obj = {};
+    var res = arr.filter(function(item){
+        let key;
+        if(typeof(item)==="object"){
+          //  对于object使用JSON.stringify
+            key = JSON.stringify(item)
+        }else{
+          //  为了避免 1 和 '1' 这样的情况出现在同一个key中
+          key = typeof(item) + item;
+        }
+        return obj.hasOwnProperty(key) ? false : (obj[key] = true)
+    })
+    console.log(obj)
+    return res
+}
+
+var arr5 = [NaN,NaN,{A:1},{A:1},null,undefined]
+function reduce_sort(arr){
+    arr.sort(); //先排序
+    // 使用reduce挨个比较去重，去重后的结果保存在init数组中
+    return arr.reduce(function(init,current){
+        if(init.length === 0 || init[init.length-1]!==current){
+            init.push(current)
+        }
+        return init
+    },[]);
+}
+console.log(reduce_sort(arr5))
+
+
+
+function reduce_(arr){
+    arr.sort();
+    arr.reduce(function(init,current){
+        if(init.length === 0 || init[length-1] !== current){
+            init.push(current)
+        }
+        return init;
+    },[])
+}
+
+
+
+
+//NAN会被过滤掉 NAN !== NAN
+var arr = [1,1,2,2,3,3,4,NaN,NaN];
+
+const unique = arr => arr.filter((e,i) => arr.indexOf(e) === i);
+
+
+console.log(unique(arr))
+
+
+
+//为啥不显示 {a:1}???
+function uniqueEasy(arr){
+    // 判断arr是否为数组
+    if(!Array.isArray(arr)){
+        console.log('type error!')
+        return
+    }
+    let list = []
+    let obj = {}
+    arr.forEach(v=>{
+        if(!obj[v]){
+            obj[v] = true
+            list.push(v)
+            console.log(v,obj[v])
+        }
+    })
+    return list
+}
+let arr = [1,1,true,true,false,false,'string','string',undefined,undefined, null,null, NaN, NaN,{},{},{a:1},{a:1},[],[],[0],[0],function(){},function(){},new Date(),new Date(),Symbol(),Symbol()]
+console.log(uniqueEasy(arr))
+
+
+
+function unique(arr){
+    // 判断arr是否为数组
+    if(!Array.isArray(arr)){
+        console.log('type error!')
+        return
+    }
+    let list = []
+    let obj = {}
+    let isUnique = false // 是否唯一
+    let type = '' // 元素类型
+    let item = null // 新元素项
+    arr.forEach(v=>{
+        temp = ''
+        type = Object.prototype.toString.call(v)
+        switch(type){
+            case '[object Object]':
+                // 对象 对象不能做为对象的key值
+                item = '[object Object]' + JSON.stringify(v)
+                isUnique = obj[item]
+                break;
+            case '[object Symbol]':
+                // Symbol Symbol不能隐式转String
+                item = '[object Symbol]' + v.toString()
+                isUnique = obj[item]
+                break;
+            default:
+                item = v
+                isUnique = obj[v]
+        }
+        if(!isUnique){
+            obj[item] = true
+            list.push(v)
+        }
+    })
+    return list
+}
+let arr = [1,1,true,true,false,false,'string','string',undefined,undefined, null,null, NaN, NaN,{},{},{a:1},{a:1},[],[],[0],[0],function(){},function(){},new Date(),new Date(),Symbol(),Symbol()]
+console.log(unique(arr))

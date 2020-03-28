@@ -190,3 +190,63 @@ function fn(n){
   return n*0.01
   
 }
+
+
+
+function log(obj){
+  for(let key in obj){
+    if(typeof obj1[key] === "string"){
+      console.log(`${key}=${obj1[key]}`)
+    }else if(typeof obj[key] === "object"){
+      for(let key in obj[key]){
+        console.log(`${key}=${obj[key]}`)
+      }
+    }
+  }
+}
+
+
+
+
+
+function log(obj,parentKey = ''){
+
+  //遍历的属性包含原型链上扩展的属性
+
+  for(const key in obj){
+
+     //过滤出自身的属性
+
+      if(obj.hasOwnProperty(key) ) {
+
+         let keyName = `${parentKey}${key}`;
+
+         if(typeof obj[key] === 'object'){
+
+             //递归深入
+
+             log(obj[key],`${keyName}.`)
+
+         }else{
+            console.log(`${keyName} = ${obj[key]}`)
+           
+
+         }
+
+      }
+
+
+
+  }
+
+  
+}
+
+
+log({
+  foo : 'test',
+  bar : {
+      id : 123,
+      name : 'tx'
+  }
+})

@@ -103,3 +103,26 @@ object.getNameFunc()();
 
 
 
+
+var value = 20;
+(function () {
+    console.log(name);
+    console.log(value);
+    var name = 'local value';
+    let value = 21;
+})();
+
+
+
+
+function Page() {
+    return this.hosts;
+}
+Page.hosts = ['h1'];
+Page.prototype.hosts = ['h2'];
+const p1 = new Page();
+const p2 = Page();
+console.log(p1); 
+console.log(p2);
+console.log(p1.hosts); 
+console.log(p2.hosts);

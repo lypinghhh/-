@@ -16,6 +16,12 @@
  * 输出：查询字符串 'foo=bar&abc=xyz&abc=123'
  */
 
+
+
+ var  obj1 =   {
+     foo: 'bar',
+     abc: ['xyz', '123'],
+ }
 const queryString = {
     parse(querystring) {
         /* 功能实现 */
@@ -52,13 +58,31 @@ const queryString = {
     },
     stringify(obj) {
         /* 功能实现 */
-        
+     
+            /* 功能实现 */
+          let arr=[];
+          for( let key in obj){
+              if(typeof obj[key] === 'object'){
+              while(obj[key].length >0){
+                  arr.push(`${key}=${obj[key].shift()}`);
+              }
+            }else{
+              arr.push(`${key}=${obj[key]}`)
+            }
+            
+          
+          }
+        return arr.join('&')
+          
+          
+        }
 
 
-    },
-};
+    };
+
 
 console.log(queryString.parse('foo=bar&abc=xyz&abc=123'))
+
 
 
 
@@ -94,3 +118,8 @@ var parse = function (querystring) {
 }
 
 console.log(parse('foo=bar&abc=xyz&abc=123'))
+
+
+
+console.log('agfdhfsd')
+console.log(queryString.stringify(obj1))
