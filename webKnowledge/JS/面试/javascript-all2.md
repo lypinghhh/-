@@ -510,3 +510,8 @@ import 'babel-polyfill'
 3. Async/Await
 4. Generator
 
+## 虚拟DOM
+
+1. vdom是什么？为何会存在vdom?
+2. vdom的应用，核心API是什么？
+3. 介绍一下diff算法
