@@ -17,3 +17,5 @@ const C = createCache();
 //返回函数
 C.set('A',100)
 console.log(c.get('A'))
+
+

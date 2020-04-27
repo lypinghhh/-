@@ -16,5 +16,17 @@
     <input type="text" id="input1">
     <div id="div1" draggable="true">可拖拽</div>
     <script src="./demo/listToTree.js"></script>
+    <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+    </ul>
+
+    <script>
+        let ul = document.getElementsByTagName('ul')[0];
+        ul.onclick = function (e) {
+            console.log(e.target.innerText)
+        }
+    </script>
 </body>
 </html>

@@ -22,8 +22,10 @@ function Fibonacci1(n)
     for (let i = 2 ;i <= n ;i++){
         arr.push(arr[i-2]+arr[i-1])
     }
-    return arr(n);
+    return arr[n];
 }
+
+console.log(Fibonacci1(5))
 
 //不太懂
 // 动态规划的特点是：最优子结构、无后效性、子问题重叠
