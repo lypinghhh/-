@@ -49,3 +49,54 @@ console.log(flatten(arr))
      return arr
  }
  console.log(flatten(arr))
+
+
+
+
+ Array.prototype.newFlat = function(deep = 1){
+    const arr = this;
+    return arr.reduce((target,current) =>{
+        Array.isArray(current) && deep > 1?
+        target.concat(current.newflat(deep - 1)):
+        target.concat(current)
+    },[])
+}
+
+
+
+console.log(arr.newFlat()) => [1, 2, 3, 4, [5, 6, [7, 8, 9]]];
+console.log(arr.newFlat(1)) => [1, 2, 3, 4, [5, 6, [7, 8, 9]]];
+console.log(arr.newFlat(2)) => [1, 2, 3, 4, 5, 6, [7, 8, 9]];
+console.log(arr.newFlat(3)) => [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(arr.newFlat(4)) => [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+
+
+const arr = [1, [2, 3],
+    [4, [5, 6, [7, 8, 9]]]
+];
+
+
+Array.prototype.newFlat = function(deep = 1){
+    const arr = this;
+    return arr.reduce((target,current) =>{
+        console.log(target,current)
+        Array.isArray(current) && deep > 1?
+        target.concat(current.newFlat(deep - 1)):
+        target.concat(current)
+    },[])
+}
+
+console.log(arr.newFlat(4)) 
+
+
+console.log(arr.newFlat()) 
+//=> [1, 2, 3, 4, [5, 6, [7, 8, 9]]];
+console.log(arr.newFlat(1)) 
+//=> [1, 2, 3, 4, [5, 6, [7, 8, 9]]];
+console.log(arr.newFlat(2)) 
+//=> [1, 2, 3, 4, 5, 6, [7, 8, 9]];
+console.log(arr.newFlat(3)) 
+//=> [1, 2, 3, 4, 5, 6, 7, 8, 9];
+console.log(arr.newFlat(4)) 
+//=> [1, 2, 3, 4, 5, 6, 7, 8, 9];

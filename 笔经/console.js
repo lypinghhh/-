@@ -263,7 +263,7 @@ const obj = {
         }
         f.call(helperObj)
     },
- 
+
 }
 
 obj.say5()
@@ -277,25 +277,25 @@ const helperObj = {
     name: 'one piece'
 }
 const obj = {
-    name : 'lufy',
+    name: 'lufy',
 
-    say2: ()=>{
+    say2: () => {
+        console.log(this.name)
+    },
+
+    say4() {
+        const f = () => console.log(this.name)
+        f()
+    },
+    say5() {
+        const f = () => console.log(this.name)
+        f.call(helperObj)
+    },
+    embed: {
+        name: 'solon',
+        say() {
             console.log(this.name)
-    },
-
-    say4(){
-            const f = ()=>console.log(this.name)
-            f()
-    },
-    say5(){
-            const f = ()=>console.log(this.name)
-            f.call(helperObj)
-    },
-    embed:{
-            name: 'solon',
-            say(){
-                    console.log(this.name)
-            }
+        }
     }
 }
 const say = obj.embed.say
@@ -306,3 +306,100 @@ obj.embed.say()
 obj.say2()
 obj.say4()
 obj.say5()
+
+
+
+
+
+function Foo() {}
+let oldName = Foo.name;
+Foo.name = "bar";
+console.log([oldName, Foo.name]);
+
+
+let a = Foo.prototype;
+let b = new Foo();
+let c = b.prototype;
+console.log(a === c);
+
+
+
+let name = 'global';
+
+function getName() {
+    name = 'local';
+    return function () {
+        return name;
+    }
+}
+let getPrivate = getName();
+console.log(name);
+console.log(getPrivate());
+
+
+
+
+
+async function test() {
+    return 1;
+}
+async function call() {
+    const a = test();
+    const b = await test();
+    console.log(a, b)
+}
+call()
+
+
+
+window.data = 5;
+var foo = {
+    data: 6,
+    click: function () {
+        console.log(this.data);
+    }
+};
+// div.addEventListener('click', foo.click);
+var bar = foo.click;
+bar();
+
+
+
+
+var a = function () {
+    this.b = 3;
+}
+var c = new a();
+a.protorype.b = 9;
+var b = 7;
+a();
+console.log(b);
+console.log(c.b);
+
+
+
+[]
+
+
+
+//all
+Promise.all([]).then((res) => {
+    console.log('all');
+})
+
+Promise.race([]).then((res) => {
+    console.log('race')
+})
+
+
+function func(one,two,three){
+    console.log(one);
+    console.log(two);
+    console.log(three);
+}
+
+var person = 'lili';
+var age = 20;
+
+
+func `${person}is${age}years old`

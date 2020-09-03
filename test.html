@@ -1,0 +1,88 @@
+<!-- <div class="container">
+<div class="">元素</div>
+<button id="btn" >按钮</button>
+
+</div>
+
+<style>
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.el{
+    animation: exchange 100 infinite 1000 ;
+}
+@keyframes exchange {
+    from{
+        transform: translateX(0) rotate(0);       
+    }
+    to{
+        transform: translateX(100px) rotate(90);
+        
+    }
+}
+    
+</style>
+
+
+<script>
+    let el = document.getElementById('el');
+    el.addEventListener('click',function(){
+        el.className = '.el'
+    })
+
+    
+</script> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <div class="div1">1234567890-</div>
+        <div class="div2"></div>
+    </div>
+
+
+    <div class="hex"></div>
+</body>
+</html>
+
+
+
+<style>
+
+    .box{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .div1{
+        flex: 1;
+        background-color: red;
+    }
+    .div2{
+        flex-basis: 100px;
+        background-color: blue;
+    }
+
+    .hex{
+        background-color: yellow;
+        min-height: 500px;
+        max-height: 100px;
+        /* 1000px生效 */
+        height: 1000px;
+    }
+</style>
+
+
+

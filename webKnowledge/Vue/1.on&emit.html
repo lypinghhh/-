@@ -8,52 +8,51 @@
 <html>
 
 <head>
-<title> $emit 和 $on</title>
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title> $emit 和 $on</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 
 <body>
-<div id="root">
-    <button @click = "boost">触发事件</button>
-    <button @click = "boost1">触发事件</button>
-    <button @click = "boost2">触发事件</button>
-</div>
+    <div id="root">
+        <button @click="boost">触发事件</button>
+        <button @click="boost1">触发事件</button>
+        <button @click="boost2">触发事件</button>
+    </div>
 
     <script>
         new Vue({
-            el:'#root',
-            data(){
+            el: '#root',
+            data() {
                 return {
-                    message:'hello vue',
-                    message2:'hello vue 22222'
+                    message: 'hello vue',
+                    message2: 'hello vue 22222'
                 }
             },
-            created(){
-                this.$on('my_events',this.handleEvents)
-                this.$on('my_events',this.handleEvents2)
-                this.$on(['e1','e2'],this.handleEvents)
+            created() {
+                this.$on('my_events', this.handleEvents)
+                this.$on('my_events', this.handleEvents2)
+                this.$on(['e1', 'e2'], this.handleEvents)
                 console.log(this._events)
             },
-            methods:{
-                handleEvents(e){
-                    console.log(this.message,e)
+            methods: {
+                handleEvents(e) {
+                    console.log(this.message, e)
                 },
-                handleEvents2(e){
-                    console.log(this.message2,e)
+                handleEvents2(e) {
+                    console.log(this.message2, e)
                 },
-                boost(){
-                    this.$emit('my_events','my params')
+                boost() {
+                    this.$emit('my_events', 'my params')
                 },
-                boost1(){
-                    this.$emit('e1','my params')
+                boost1() {
+                    this.$emit('e1', 'my params')
                 },
-                boost2(){
-                    this.$emit('e2','my params')
+                boost2() {
+                    this.$emit('e2', 'my params')
                 }
 
             }
         })
-
     </script>
 </body>
 
@@ -61,3 +60,35 @@
 
 
 </html>
+
+
+
+
+
+<body>
+    <div> 
+        <input type="text" name="" id="input">
+        <div id="text"></div>
+    </div>
+</body>
+
+</html>
+<script>
+    var input = document.getElementById('input') 
+    var text = document.getElementById("text") 
+    var data = {
+        value: ""
+    }
+    Object.defineProperty(data, "value", {
+        set: function (val) {
+            text.innerHTML = val 
+            input.value = val
+        },
+        get: function (val) {
+            return input.value
+        }
+    })
+     input.onkeyup = function (e) {
+        data.value = e.target.value
+    }
+</script>
